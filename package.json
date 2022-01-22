@@ -1,0 +1,43 @@
+{
+  "name": "astart-cli",
+  "version": "0.0.1",
+  "author": "YanPanMichael",
+  "bin": {
+    "astart": "bin/cli.js"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "keywords": [
+    "node",
+    "cli",
+    "template"
+  ],
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "format": "prettier --write .",
+    "docs:serve": "vitepress serve docs",
+    "astart": "./bin/cli.js"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.41",
+    "colors": "^1.4.0",
+    "enquirer": "^2.3.6",
+    "execa": "^5.1.1",
+    "prettier": "^2.5.1",
+    "progress": "^2.0.3",
+    "single-line-log": "^1.1.2",
+    "vitepress": "^0.20.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.1",
+    "vite": "^2.2.1"
+  },
+  "description": "<p align=\"center\">       <a href=\"https://vitejs.dev\" target=\"_blank\" rel=\"noopener noreferrer\">                <img width=\"100\" src=\"https://vitejs.dev/logo.svg\" alt=\"Vite logo\">       </a>        <a href=\"https://www.tslang.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">                  <img width=\"100\" src=\"https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png\" alt=\"Ts logo\">                </a> </p>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "license": "MIT"
+}

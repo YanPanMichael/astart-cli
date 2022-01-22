@@ -1,0 +1,7 @@
+/node_modules
+/coverage
+/dist
+/docs
+*.log
+.vscode
+.DS_Store
