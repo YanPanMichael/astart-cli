@@ -34,7 +34,7 @@
     "@vitejs/plugin-vue": "^1.2.1",
     "vite": "^2.2.1"
   },
-  "description": "<p align=\"center\">       <a href=\"https://vitejs.dev\" target=\"_blank\" rel=\"noopener noreferrer\">                <img width=\"100\" src=\"https://vitejs.dev/logo.svg\" alt=\"Vite logo\">       </a>        <a href=\"https://www.tslang.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">                  <img width=\"100\" src=\"https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png\" alt=\"Ts logo\">                </a> </p>",
+  "description": "<p align=\"center\"> create template seed app with cli </p>",
   "main": "index.js",
   "directories": {
     "doc": "docs"
