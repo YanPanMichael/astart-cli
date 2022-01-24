@@ -2,13 +2,13 @@
 
 const fs = require('fs')
 const path = require('path')
-const cwd = process.cwd()
-const colors = require('colors')
+const colors = require('colors/safe')
 const execa = require('execa')
 const { prompt } = require('enquirer')
 let progressBar = require('progress')
 let log = require('single-line-log').stdout
 
+const cwd = process.cwd()
 let copyCount = 0 //需要拷贝的文件数量
 let copySchedule = 0 //拷贝进度
 let bar //进度条
@@ -72,27 +72,27 @@ async function init() {
 
     const pkgManager = /yarn/.test(process.env.npm_execpath) ? 'yarn' : 'npm'
 
-    step(`\nDone. Now run/完毕。现在运行:`)
-
     step(`\nDownloading dependencies.../正在下载依赖...`)
 
     let downShell = pkgManager === 'yarn' ? '' : 'install'
-    step(`\nrunning/正在运行:${pkgManager + ' ' + downShell}`)
+    step(`\nrunning/正在运行: ${pkgManager + ' ' + downShell}`)
     const downResult = await execa(`${pkgManager}`, [downShell], {
       cwd: path.relative(cwd, root),
       stdio: 'inherit'
     })
     if (downResult.failed) {
       consoleWithColor('error', '\nFailed to download dependencies/下载依赖失败 ')
-      consoleWithColor('info', `${pkgManager === 'yarn' ? `yarn` : `npm install`}\n`)
+      consoleWithColor('info', `you can ${pkgManager === 'yarn' ? `yarn` : `npm install`} again\n`)
+
     } else {
-      consoleWithColor('success', `Depend on the download is complete!/依赖下载完成!🥳`)
+      consoleWithColor('success', `Depend on the download is complete!/依赖下载完成! `)
     }
 
-    if (root !== cwd) {
-      consoleWithColor('success', `\ncd ${path.relative(cwd, root)}`)
-    }
-    consoleWithColor('success', `${pkgManager === 'yarn' ? `yarn dev` : `npm run dev`}\n`)
+    // if (root !== cwd) {
+    //   consoleWithColor('info', `\nyou can cd ${path.relative(cwd, root)}`)
+    //   process.chdir(`${path.relative(cwd, root)}`)
+    // }
+    consoleWithColor('success', `Done. creation process is completed!/创建完成!\n`)
   } catch (e) {
     console.error(e)
   }
@@ -125,11 +125,13 @@ async function checkProjectName(projectName) {
         name: 'coverQuery',
         message:
           'The current file name already exists, do you want to overwrite it?/当前文件名已存在，是否覆盖？',
-        initial: 'y/确认',
-        choices: [{ name: 'y' }, { name: 'n' }]
+        initial: 'yes/确认',
+        choices: [{ name: 'yes' }, { name: 'no' }]
       })
-      if (coverQuerySelect.coverQuery == 'n') {
-        prompt.stop()
+      if (coverQuerySelect.coverQuery == 'no') {
+        consoleWithColor('info', 'The process is terminated/创建过程主动终止')
+        process.exit(1);
+        // throw new Error('The process is terminated/创建过程主动终止')
       }
     }
     return projectName
