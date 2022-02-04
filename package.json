@@ -30,10 +30,6 @@
     "single-line-log": "^1.1.2",
     "vitepress": "^0.20.9"
   },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.1",
-    "vite": "^2.2.1"
-  },
   "description": "<p align=\"center\"> create template seed app with cli </p>",
   "main": "index.js",
   "directories": {
