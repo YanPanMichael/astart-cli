@@ -11,14 +11,16 @@
   "keywords": [
     "node",
     "cli",
-    "template"
+    "bin",
+    "packages"
   ],
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "format": "prettier --write .",
     "docs:serve": "vitepress serve docs",
-    "astart": "./bin/cli.js"
+    "astart": "./bin/cli.js",
+    "release": "qkrelease --skipBuild"
   },
   "dependencies": {
     "@types/node": "^14.14.41",
@@ -35,5 +37,8 @@
   "directories": {
     "doc": "docs"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "qk-release": "^1.0.1"
+  }
 }
