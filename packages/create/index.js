@@ -14,9 +14,9 @@ let copySchedule = 0 //拷贝进度
 let bar //进度条
 
 const colorMap = {
-    info: 'blue',
-    error: 'red',
-    success: 'green'
+  info: 'blue',
+  error: 'red',
+  success: 'green'
 }
 
 const consoleWithColor = (type, msg) => {
@@ -43,7 +43,11 @@ async function init() {
       name: 'ProjectTemplate',
       message: 'Project-template/选择项目模板',
       initial: 'seed-app',
-      choices: [{ name: 'seed-app' }, { name: 'vue3-ts-initial' }, { name: 'webpack-protist-js' }]
+      choices: [
+        { name: 'seed-app' },
+        { name: 'vue3-ts-initial' },
+        { name: 'webpack-protist-js' }
+      ]
     })
     const templateDir = path.join(
       __dirname,
@@ -81,18 +85,29 @@ async function init() {
       stdio: 'inherit'
     })
     if (downResult.failed) {
-      consoleWithColor('error', '\nFailed to download dependencies/下载依赖失败 ')
-      consoleWithColor('info', `you can ${pkgManager === 'yarn' ? `yarn` : `npm install`} again\n`)
-
+      consoleWithColor(
+        'error',
+        '\nFailed to download dependencies/下载依赖失败 '
+      )
+      consoleWithColor(
+        'info',
+        `you can ${pkgManager === 'yarn' ? `yarn` : `npm install`} again\n`
+      )
     } else {
-      consoleWithColor('success', `Depend on the download is complete!/依赖下载完成! `)
+      consoleWithColor(
+        'success',
+        `Depend on the download is complete!/依赖下载完成! `
+      )
     }
 
     // if (root !== cwd) {
     //   consoleWithColor('info', `\nyou can cd ${path.relative(cwd, root)}`)
     //   process.chdir(`${path.relative(cwd, root)}`)
     // }
-    consoleWithColor('success', `Done. creation process is completed!/创建完成!\n`)
+    consoleWithColor(
+      'success',
+      `Done. creation process is completed!/创建完成!\n`
+    )
   } catch (e) {
     console.error(e)
   }
@@ -130,7 +145,7 @@ async function checkProjectName(projectName) {
       })
       if (coverQuerySelect.coverQuery == 'no') {
         consoleWithColor('info', 'The process is terminated/创建过程主动终止')
-        process.exit(1);
+        process.exit(1)
         // throw new Error('The process is terminated/创建过程主动终止')
       }
     }

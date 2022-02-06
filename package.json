@@ -39,6 +39,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "qk-release": "^1.0.1"
+    "qk-release": "^1.0.3"
   }
 }
