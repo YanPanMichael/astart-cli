@@ -1,6 +1,6 @@
 {
   "name": "astart-cli",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": "YanPanMichael",
   "bin": {
     "astart": "bin/cli.js"
@@ -43,6 +43,6 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
-    "qk-release": "^1.0.3"
+    "qk-release": "^1.0.11"
   }
 }
