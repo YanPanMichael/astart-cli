@@ -20,7 +20,9 @@
     "format": "prettier --write .",
     "docs:serve": "vitepress serve docs",
     "astart": "./bin/cli.js",
-    "release": "qkrelease --skipBuild"
+    "release": "qkrelease --skipBuild",
+    "fix": "eslint . --fix",
+    "posttest": "eslint ."
   },
   "dependencies": {
     "@types/node": "^14.14.41",
@@ -32,13 +34,15 @@
     "single-line-log": "^1.1.2",
     "vitepress": "^0.20.9"
   },
-  "description": "<p align=\"center\"> create template seed app with cli </p>",
+  "description": "cli scaffold of template seed app",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
     "qk-release": "^1.0.3"
   }
 }

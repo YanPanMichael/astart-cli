@@ -5,13 +5,13 @@ const path = require('path')
 const colors = require('colors/safe')
 const execa = require('execa')
 const { prompt } = require('enquirer')
-let progressBar = require('progress')
-let log = require('single-line-log').stdout
+const progressBar = require('progress')
+const log = require('single-line-log').stdout
 
 const cwd = process.cwd()
-let copyCount = 0 //需要拷贝的文件数量
-let copySchedule = 0 //拷贝进度
-let bar //进度条
+let copyCount = 0 // 需要拷贝的文件数量
+let copySchedule = 0 // 拷贝进度
+let bar // 进度条
 
 const colorMap = {
   info: 'blue',
@@ -25,20 +25,20 @@ const consoleWithColor = (type, msg) => {
 
 const step = (msg) => console.log(colors.cyan(msg))
 
-async function init() {
+async function init () {
   try {
     const renameFiles = {
       _gitignore: '.gitignore'
     }
 
-    let projectname = await prompt({
+    const projectname = await prompt({
       type: 'input',
       name: 'projectName',
       message: 'projectName/项目名',
       initial: 'seed-app'
     })
     const projectName = await checkProjectName(projectname.projectName)
-    let selectTemplate = await prompt({
+    const selectTemplate = await prompt({
       type: 'select',
       name: 'ProjectTemplate',
       message: 'Project-template/选择项目模板',
@@ -53,7 +53,7 @@ async function init() {
       __dirname,
       `template-${selectTemplate.ProjectTemplate}`
     )
-    let root = path.join(cwd, projectName)
+    const root = path.join(cwd, projectName)
 
     step(
       `\nScaffolding project in ${projectName}.../创建${projectName}项目中...`
@@ -70,15 +70,15 @@ async function init() {
 
     await copy(path.join(templateDir), root)
 
-    const pkg = require(path.join(templateDir, `package.json`))
+    const pkg = require(path.join(templateDir, 'package.json'))
 
     pkg.name = projectName
 
     const pkgManager = /yarn/.test(process.env.npm_execpath) ? 'yarn' : 'npm'
 
-    step(`\nDownloading dependencies.../正在下载依赖...`)
+    step('\nDownloading dependencies.../正在下载依赖...')
 
-    let downShell = pkgManager === 'yarn' ? '' : 'install'
+    const downShell = pkgManager === 'yarn' ? '' : 'install'
     step(`\nrunning/正在运行: ${pkgManager + ' ' + downShell}`)
     const downResult = await execa(`${pkgManager}`, [downShell], {
       cwd: path.relative(cwd, root),
@@ -91,12 +91,12 @@ async function init() {
       )
       consoleWithColor(
         'info',
-        `you can ${pkgManager === 'yarn' ? `yarn` : `npm install`} again\n`
+        `you can ${pkgManager === 'yarn' ? 'yarn' : 'npm install'} again\n`
       )
     } else {
       consoleWithColor(
         'success',
-        `Depend on the download is complete!/依赖下载完成! `
+        'Depend on the download is complete!/依赖下载完成! '
       )
     }
 
@@ -106,17 +106,17 @@ async function init() {
     // }
     consoleWithColor(
       'success',
-      `Done. creation process is completed!/创建完成!\n`
+      'Done. creation process is completed!/创建完成!\n'
     )
   } catch (e) {
     console.error(e)
   }
 }
 
-async function copy(src, dest) {
+async function copy (src, dest) {
   const stat = fs.statSync(src)
   if (stat.isDirectory()) {
-    //是否是一个目录 而不是文件。
+    // 是否是一个目录 而不是文件。
     copyDir(src, dest)
   } else {
     copySchedule++
@@ -129,13 +129,13 @@ async function copy(src, dest) {
   }
 }
 
-async function checkProjectName(projectName) {
+async function checkProjectName (projectName) {
   const packageNameRegExp =
     /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/
   if (packageNameRegExp.test(projectName)) {
     console.log(path.join(cwd, projectName))
     if (fs.existsSync(path.join(cwd, projectName))) {
-      let coverQuerySelect = await prompt({
+      const coverQuerySelect = await prompt({
         type: 'select',
         name: 'coverQuery',
         message:
@@ -164,7 +164,7 @@ async function checkProjectName(projectName) {
     const { inputPackageName } = await prompt({
       type: 'input',
       name: 'inputPackageName',
-      message: `Package name:`,
+      message: 'Package name:',
       initial: suggestedPackageName,
       validate: (input) =>
         packageNameRegExp.test(input) ? true : 'Invalid package.json name'
@@ -173,7 +173,7 @@ async function checkProjectName(projectName) {
   }
 }
 
-function copyDir(srcDir, destDir) {
+function copyDir (srcDir, destDir) {
   fs.mkdirSync(destDir, { recursive: true })
   for (const file of fs.readdirSync(srcDir)) {
     const srcFile = path.resolve(srcDir, file)
@@ -185,9 +185,9 @@ function copyDir(srcDir, destDir) {
 /**
  * 计算当前模板文件数量
  */
-function calculateCount(srcDir) {
+function calculateCount (srcDir) {
   if (fs.statSync(srcDir).isDirectory()) {
-    //是否是一个目录 而不是文件。
+    // 是否是一个目录 而不是文件。
     dirCount(srcDir)
   }
 }
@@ -195,7 +195,7 @@ function calculateCount(srcDir) {
 /***
  * 目录内部数量
  */
-function dirCount(srcDir) {
+function dirCount (srcDir) {
   copyCount += fs.readdirSync(srcDir).length
   for (const file of fs.readdirSync(srcDir)) {
     const srcFile = path.resolve(srcDir, file)
@@ -203,7 +203,7 @@ function dirCount(srcDir) {
   }
 }
 
-function emptyDir(dir) {
+function emptyDir (dir) {
   if (!fs.existsSync(dir)) {
     return
   }
