@@ -33,7 +33,9 @@ async function init () {
     //   _gitignore: '.gitignore'
     // }
 
-    const runtime = new Date().toLocaleString('en-us', { timeZoneName: 'short' })
+    const runtime = new Date().toLocaleString('en-us', {
+      timeZoneName: 'short'
+    })
     const version = pkgLoader().version || '--'
     BannerUtil.print(version, runtime)
 
@@ -69,6 +71,7 @@ async function init () {
 
     calculateCount(path.join(templateDir))
 
+    // eslint-disable-next-line
     bar = new progressBar(
       'Current creation progress/当前创建进度: :bar :percent ',
       { total: copyCount, complete: '█', incomplete: '░', width: 30 }

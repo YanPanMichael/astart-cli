@@ -15,13 +15,15 @@ const BannerUtil = {
         ) + '│'
     }
     console.log(
-`${figlet.textSync('   ASTART!!', {
-  font: 'Standard',
-  horizontalLayout: 'default',
-  verticalLayout: 'default',
-  whitespaceBreak: true
-})}
-        \\__\\_/  ${chalk.italic(('@astart-cli@' + version).padStart(9))}  \\_/__/
+      `${figlet.textSync('   ASTART!!', {
+        font: 'Standard',
+        horizontalLayout: 'default',
+        verticalLayout: 'default',
+        whitespaceBreak: true
+      })}
+        \\__\\_/  ${chalk.italic(
+          ('@astart-cli@' + version).padStart(9)
+        )}  \\_/__/
 
 ╭──────────────────────────────────────────────────╮
 │       Web Development Application Scaffold       │${runtimeStrLine}
