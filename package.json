@@ -1,6 +1,6 @@
 {
   "name": "astart-cli",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "author": "YanPanMichael",
   "bin": {
     "astart": "bin/cli.js"
