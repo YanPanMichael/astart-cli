@@ -7,6 +7,8 @@ const execa = require('execa')
 const { prompt } = require('enquirer')
 const progressBar = require('progress')
 const log = require('single-line-log').stdout
+const BannerUtil = require('../utils/banner-utils')
+const pkgLoader = require('../utils/pkg-loader')
 
 const cwd = process.cwd()
 let copyCount = 0 // 需要拷贝的文件数量
@@ -27,9 +29,13 @@ const step = (msg) => console.log(colors.cyan(msg))
 
 async function init () {
   try {
-    const renameFiles = {
-      _gitignore: '.gitignore'
-    }
+    // const renameFiles = {
+    //   _gitignore: '.gitignore'
+    // }
+
+    const runtime = new Date().toLocaleString('en-us', { timeZoneName: 'short' })
+    const version = pkgLoader().version || '--'
+    BannerUtil.print(version, runtime)
 
     const projectname = await prompt({
       type: 'input',
@@ -143,7 +149,7 @@ async function checkProjectName (projectName) {
         initial: 'yes/确认',
         choices: [{ name: 'yes' }, { name: 'no' }]
       })
-      if (coverQuerySelect.coverQuery == 'no') {
+      if (coverQuerySelect.coverQuery === 'no') {
         consoleWithColor('info', 'The process is terminated/创建过程主动终止')
         process.exit(1)
         // throw new Error('The process is terminated/创建过程主动终止')

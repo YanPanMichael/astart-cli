@@ -1,6 +1,6 @@
 # astart-cli
 
-> A beautiful javascript scaffold for seed application
+> A modern web application scaffold with mutiple solution templates
 
 ## ✨ Feature
 
