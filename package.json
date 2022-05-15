@@ -2,6 +2,15 @@
   "name": "astart-cli",
   "version": "1.0.0",
   "author": "YanPanMichael",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YanPanMichael/astart-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YanPanMichael/astart-cli/issues",
+    "email": "1214863281@qq.com"
+  },
+  "homepage": "https://github.com/YanPanMichael/astart-cli",
   "bin": {
     "astart": "bin/cli.js"
   },
