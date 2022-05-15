@@ -54,6 +54,6 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
-    "qk-release": "^1.0.11"
+    "qk-release": "^1.1.1"
   }
 }

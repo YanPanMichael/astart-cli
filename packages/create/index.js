@@ -53,6 +53,7 @@ async function init () {
       initial: 'seed-app',
       choices: [
         { name: 'seed-app' },
+        { name: 'seed-react-app' },
         { name: 'vue3-ts-initial' },
         { name: 'webpack-protist-js' }
       ]
