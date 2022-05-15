@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+### [1.1.1](https://github.com/YanPanMichael/astart-cli/compare/v1.1.0...v1.1.1) (2022-05-15)
+
+
+### Features
+
+* add react seed template ([4b7c972](https://github.com/YanPanMichael/astart-cli/commit/4b7c972cb2a34b2983c70f9bd3393847a1fc421a))
+
 ## [1.1.0](https://github.com/YanPanMichael/astart-cli/compare/v1.0.0...v1.1.0) (2022-05-15)
 
 
