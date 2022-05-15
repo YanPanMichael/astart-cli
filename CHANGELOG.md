@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+## [1.1.0](https://github.com/YanPanMichael/astart-cli/compare/v1.0.0...v1.1.0) (2022-05-15)
+
+
+### Features
+
+* add react seed ([391d7cd](https://github.com/YanPanMichael/astart-cli/commit/391d7cdc90922dac8cff6c541af4983f7d44bfc2))
+* eject app ([7805a31](https://github.com/YanPanMichael/astart-cli/commit/7805a3186f2de3af02835ce6338d707749bb367f))
+* save ([431a88a](https://github.com/YanPanMichael/astart-cli/commit/431a88a3fe67c01cc4a759dee37b1d7e54190715))
+
 ## [1.0.0](https://github.com/YanPanMichael/astart-cli/compare/v0.0.4...v1.0.0) (2022-04-29)
 
 
