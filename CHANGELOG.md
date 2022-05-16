@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+### [1.1.2](https://github.com/YanPanMichael/astart-cli/compare/v1.1.1...v1.1.2) (2022-05-16)
+
+
+### Features
+
+* add ts seed module ([f452ecc](https://github.com/YanPanMichael/astart-cli/commit/f452ecc7ac5a74fdaeb76d6834987d46f844fc06))
+
 ### [1.1.1](https://github.com/YanPanMichael/astart-cli/compare/v1.1.0...v1.1.1) (2022-05-15)
 
 
