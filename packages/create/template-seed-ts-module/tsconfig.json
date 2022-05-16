@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "module": "es2015",
+        "target": "es5",
+        "lib": ["dom", "es6", "es7"],
+        "importHelpers": true,
+        "alwaysStrict": true,
+        "sourceMap": false,
+        "declaration": true,
+        "outDir": "./dist/",
+        "declarationDir": "dist/types",
+        "isolatedModules": false,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitAny": false,
+        "noImplicitThis": false,
+        "strictNullChecks": false,
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "-/*": [
+                "./dist/*"
+            ],
+        },
+        "typeRoots": [
+          "node_modules/@types"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "examples",
+        "**/*.d.ts"
+    ],
+    "include": [
+        "src"
+    ]
+}
