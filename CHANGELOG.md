@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+### [1.1.3](https://github.com/YanPanMichael/astart-cli/compare/v1.1.2...v1.1.3) (2022-05-19)
+
+
+### Features
+
+* add __dirname pkg ([57897bd](https://github.com/YanPanMichael/astart-cli/commit/57897bd25f8699b6c48d0f19f19a21678cf3be0b))
+
 ### [1.1.2](https://github.com/YanPanMichael/astart-cli/compare/v1.1.1...v1.1.2) (2022-05-16)
 
 
