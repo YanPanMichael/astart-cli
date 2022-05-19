@@ -36,7 +36,7 @@ async function init () {
     const runtime = new Date().toLocaleString('en-us', {
       timeZoneName: 'short'
     })
-    const version = pkgLoader().version || '--'
+    const version = pkgLoader.loadAstPkg().version || '--'
     BannerUtil.print(version, runtime)
 
     const projectname = await prompt({
