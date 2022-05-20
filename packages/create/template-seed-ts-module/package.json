@@ -18,15 +18,12 @@
     "fix": "eslint . --fix",
     "format": "prettier --write .",
     "release": "qkrelease",
-    "prepare": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "changelog:help": "conventional-changelog --help",
+    "changelog": "conventional-changelog -p simple -i CHANGELOG.md -s -r 0"
   },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4",
     "@commitlint/prompt": "^16.2.4",
     "@types/jest": "^27.0.1",
     "@types/node": "~16.11",
@@ -37,12 +34,29 @@
     "eslint": "~8.11",
     "eslint-config-prettier": "~8.5",
     "eslint-plugin-jest": "^26.1.5",
-    "husky": "^7.0.4",
     "jest": "~27.5",
-    "pinst": "^3.0.0",
     "qk-release": "^1.1.0",
     "struk": "^1.0.2",
     "ts-jest": "^27.1.4",
-    "validate-commit-msg": "^2.14.0"
+    "validate-commit-msg": "^2.14.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "husky": "^4.3.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "commitiquette"
+    }
+  },
+  "changelogConfig": {
+    "authorName": true,
+    "authorEmail": true
   }
 }
