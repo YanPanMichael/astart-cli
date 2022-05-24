@@ -1,8 +1,7 @@
 {
-  "name": "vite-vue3-cli",
-  "version": "0.0.8",
+  "name": "vite-vue3-app",
+  "version": "0.0.1",
   "license": "MIT",
-  "author": "Mr.wu",
   "scripts": {
     "dev": "vite",
     "dev:module1": "cross-env VITE_ROOT_URL=./src/module/module1 VITE_MODULE_NAME=module1 vite",

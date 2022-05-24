@@ -1,4 +1,4 @@
-## 阅读我！！
+## webpack-protist-js
 
 此目录中配置 index 页面内部包含资源文件，页面等。
 

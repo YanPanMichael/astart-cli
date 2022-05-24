@@ -43,19 +43,18 @@ async function init () {
       type: 'input',
       name: 'projectName',
       message: 'projectName/项目名',
-      initial: 'seed-app'
+      initial: 'my-react-app'
     })
     const projectName = await checkProjectName(projectname.projectName)
     const selectTemplate = await prompt({
       type: 'select',
       name: 'ProjectTemplate',
       message: 'Project-template/选择项目模板',
-      initial: 'seed-app',
+      initial: 'seed-react-app',
       choices: [
-        { name: 'seed-app' },
-        { name: 'seed-ts-module' },
         { name: 'seed-react-app' },
-        { name: 'vue3-ts-initial' },
+        { name: 'seed-ts-module' },
+        { name: 'seed-vue3-app' },
         { name: 'webpack-protist-js' }
       ]
     })

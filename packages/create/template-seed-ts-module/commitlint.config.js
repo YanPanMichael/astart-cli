@@ -13,6 +13,7 @@ module.exports = {
         'docs', // 只是文档的更改
         'perf', //提高性能的代码更改
         'revert',// 撤回提交
+        'release',// release发布
         'test' // 添加或修正测试
 			],
 		],
