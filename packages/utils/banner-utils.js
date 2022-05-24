@@ -26,7 +26,7 @@ const BannerUtil = {
         )}  \\_/__/
 
 ╭──────────────────────────────────────────────────╮
-│       Web Development Application Scaffold       │${runtimeStrLine}
+│       Web Application Development Scaffold       │${runtimeStrLine}
 ╰──────────────────────────────────────────────────╯
 `
     )
