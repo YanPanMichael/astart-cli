@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+### [1.3.2](https://github.com/YanPanMichael/astart-cli/compare/v1.3.1...v1.3.2) (2022-05-26)
+
+
+### Features
+
+* save ([c90a6a8](https://github.com/YanPanMichael/astart-cli/commit/c90a6a80c7890b3feb910437f623902284ee5c12))
+
 ### [1.3.1](https://github.com/YanPanMichael/astart-cli/compare/v1.3.0...v1.3.1) (2022-05-24)
 
 
