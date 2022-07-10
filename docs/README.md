@@ -1,6 +1,6 @@
 # Astart 服务
 
-简单的 [astart] HTTP 中间件服务，用于简化通过 astart 发出的 HTTP 请求的挂钩（和挂钩测试）
+简单的 [astart-cli] 服务，用于简化通过 astart 发出的 HTTP 请求的挂钩（和挂钩测试）
 
 ## 这是什么？
 

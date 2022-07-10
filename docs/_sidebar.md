@@ -1,5 +1,5 @@
 - 介绍
-  - [Astart中间件]()
+  - [Astart-CLI]()
   - [安装](installation.md)
   - [简化的语法](simplified-syntax.md)
 
