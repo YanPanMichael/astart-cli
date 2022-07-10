@@ -36,7 +36,7 @@
     "eslint-plugin-jest": "^26.1.5",
     "jest": "~27.5",
     "qk-release": "^1.1.2",
-    "struk": "^1.0.4",
+    "struk": "^1.1.0",
     "ts-jest": "^27.1.4",
     "validate-commit-msg": "^2.14.0",
     "@commitlint/cli": "^11.0.0",

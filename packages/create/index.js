@@ -27,12 +27,19 @@ const consoleWithColor = (type, msg) => {
 
 const step = (msg) => console.log(colors.cyan(msg))
 
-async function init () {
-  try {
-    // const renameFiles = {
-    //   _gitignore: '.gitignore'
-    // }
+const renameFiles = {
+  _gitignore: '.gitignore'
+}
 
+async function init () {
+  let targetDir = argv._[0]
+  let template = argv.template || argv.t
+
+  const defaultProjectName = !targetDir
+  ? 'my-react-app'
+  : targetDir.trim().replace(/\/+$/g, '')
+  
+  try {
     const runtime = new Date().toLocaleString('en-us', {
       timeZoneName: 'short'
     })
@@ -43,7 +50,7 @@ async function init () {
       type: 'input',
       name: 'projectName',
       message: 'projectName/项目名',
-      initial: 'my-react-app'
+      initial: defaultProjectName
     })
     const projectName = await checkProjectName(projectname.projectName)
     const selectTemplate = await prompt({

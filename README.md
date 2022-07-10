@@ -28,7 +28,6 @@ astart # run command astart in terminal directly
 <br>
 😉😘 If it is helpful to you, please add <b>⭐️<a href="https://github.com/YanPanMichael/astart-cli">Star</a></b> Thanks~
 
-
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
