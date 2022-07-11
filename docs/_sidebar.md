@@ -1,20 +1,12 @@
 - 介绍
   - [Astart-CLI]()
   - [安装](installation.md)
-  - [简化的语法](simplified-syntax.md)
-
-- API
-  - [中间件方法](api/methods.md)
-  - [`Service` 类](api/Service.md)
 
 - 实例
-  - [认证重试中间件](examples/auth-middleware.md)
-  - [语言环境中间件](examples/locale-middleware.md)
-  - [服务模块](examples/service.md)
-  - [返回promises](examples/promise.md)
-  - [ES5 使用规范](examples/es5.md)
-  - [Browser 使用规范](examples/browser.md)
-  - [中间件测试用例](examples/testing.md)
+  - [初始react-app解决方案](examples/react-app.md)
+  - [初始组件类ts解决方案](examples/ts-module.md)
+  - [初始vue3-app解决方案](examples/vue3-app.md)
+  - [初始webpack解决方案](examples/webpack.md)
 
 - 资源链接
   - [Gitlab](https://github.com/YanPanMichael/astart-cli)
