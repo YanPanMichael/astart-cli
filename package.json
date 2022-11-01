@@ -24,15 +24,15 @@
     "packages"
   ],
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
     "format": "prettier --write .",
-    "docs:serve": "vitepress serve docs",
     "astart": "./bin/cli.js",
     "release": "qkrelease --skipBuild",
     "fix": "eslint . --fix",
     "posttest": "eslint .",
-    "docs": "docsify serve ./docs"
+    "docs:docsify": "docsify serve ./docs2",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
     "@types/node": "^14.14.41",
@@ -52,8 +52,16 @@
   "license": "MIT",
   "devDependencies": {
     "docsify-cli": "^4.4.4",
+    "esbuild-wasm": "^0.15.12",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
-    "qk-release": "^1.1.2"
+    "qk-release": "^1.1.2",
+    "vitepress": "1.0.0-alpha.26",
+    "vue": "^3.2.41"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "npm:esbuild-wasm@^0.15.12"
+    }
   }
 }
