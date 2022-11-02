@@ -1,4 +1,6 @@
-## 关于作者
+# 关于作者
+
+---
 
 ::: info 姓名
 Yan Pan
@@ -25,6 +27,6 @@ import ConcatComp from './concat.vue'
 </script>
 
 ::: tip 联系方式
-Join with me and let us to contribute the Astart-CLI together!
+Join with me and let us to contribute the Astart-CLI together 👏👏👏
 <concat-comp />
 :::

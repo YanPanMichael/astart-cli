@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-const BASE = "/";
+const BASE = "/docs/";
 
 export default defineConfig({
   lang: "zh-CN",
@@ -69,7 +69,7 @@ export default defineConfig({
             link: "/templates/vue3-app",
           },
           {
-            text: "初始webpack构建配置方案",
+            text: "初始webpack配置方案",
             link: "/templates/webpack",
           },
         ],
@@ -84,7 +84,6 @@ export default defineConfig({
         {
           text: "Astart-CLI指南",
           collapsible: true,
-          collapsed: true,
           items: [
             {
               text: "定义",
@@ -143,7 +142,7 @@ export default defineConfig({
               link: "/templates/vue3-app",
             },
             {
-              text: "初始webpack构建配置方案",
+              text: "初始webpack配置方案",
               link: "/templates/webpack",
             },
           ],

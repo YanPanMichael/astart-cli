@@ -13,7 +13,6 @@
     <p>
       <span>QQ</span>
       <div>972702793</div>
-      <!-- <img src="../utils/dog.png" alt="qq" title="qq" /> -->
     </p>
   </div>
 </template>
