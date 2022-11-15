@@ -9,8 +9,11 @@ const progressBar = require('progress')
 const log = require('single-line-log').stdout
 const BannerUtil = require('../utils/banner-utils')
 const pkgLoader = require('../utils/pkg-loader')
+const minimist = require('minimist')
 
 const cwd = process.cwd()
+// non associated with an option ( _ ) needs to be parsed as a string. See #4606
+const argv = minimist(process.argv.slice(2), { string: ['_'] })
 let copyCount = 0 // 需要拷贝的文件数量
 let copySchedule = 0 // 拷贝进度
 let bar // 进度条
@@ -32,8 +35,8 @@ const renameFiles = {
 }
 
 async function init () {
-  let targetDir = argv._[0]
-  let template = argv.template || argv.t
+  let targetDir = argv?._ && argv?._[0]
+  // let template = argv?.template || argv?.t
 
   const defaultProjectName = !targetDir
   ? 'my-react-app'
