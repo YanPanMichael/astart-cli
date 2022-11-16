@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+### [1.4.2](https://github.com/YanPanMichael/astart-cli/compare/v1.4.1...v1.4.2) (2022-11-16)
+
+
+### Features
+
+* add vitepress ([5f3ae3c](https://github.com/YanPanMichael/astart-cli/commit/5f3ae3c4fc1ef22719cb24a1f853e2ca3573fc47))
+* fix argv ([ec60fe8](https://github.com/YanPanMichael/astart-cli/commit/ec60fe871abddee5f0ccf0cc1eefdbcf5fa719a8))
+* fix param ([947c4b2](https://github.com/YanPanMichael/astart-cli/commit/947c4b2aca303ba46b346d43f7a8177c759d6630))
+* update template ([94be9f5](https://github.com/YanPanMichael/astart-cli/commit/94be9f50f46868b1dbadee752bdad1269374598c))
+
 ### [1.4.1](https://github.com/YanPanMichael/astart-cli/compare/v1.4.0...v1.4.1) (2022-07-11)
 
 
