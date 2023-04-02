@@ -1,6 +1,6 @@
 {
   "name": "astart-cli",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "author": "YanPanMichael",
   "repository": {
     "type": "git",
@@ -40,9 +40,10 @@
     "colors": "^1.4.0",
     "enquirer": "^2.3.6",
     "execa": "^5.1.1",
+    "ignore": "^5.2.4",
+    "minimist": "^1.2.7",
     "prettier": "^2.5.1",
     "progress": "^2.0.3",
-    "minimist": "^1.2.7",
     "single-line-log": "^1.1.2"
   },
   "description": "A modern web application scaffold with mutiple solution templates",

@@ -25,6 +25,10 @@ npm install -g astart-cli@latest # OR yarn global add astart-cli@latest
 astart # run command astart in terminal directly
 ```
 
+```bash
+astart xxx # xxx is the name of project which you want to define
+```
+
 <br>
 😉😘 If it is helpful to you, please add <b>⭐️<a href="https://github.com/YanPanMichael/astart-cli">Star</a></b> Thanks~
 
