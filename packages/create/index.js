@@ -106,8 +106,6 @@ async function init () {
 
     await copy(path.join(templateDir), root)
 
-    addGitIgnoreWarning()
-
     const pkg = require(path.join(templateDir, 'package.json'))
 
     pkg.name = projectName
@@ -146,6 +144,8 @@ async function init () {
       'success',
       'Done. creation process is completed!/创建完成!\n'
     )
+
+    addGitIgnoreWarning()
   } catch (e) {
     console.error(e)
   }

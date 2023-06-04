@@ -5,7 +5,7 @@
 [![MIT][license-badge]][license]
 [![Build Status - GitHub Actions][gha-badge]][gha-ci]
 
-> A modern web application scaffold with mutiple solution templates
+> A modern web application scaffold with multiple solution templates
 
 ## ✨ Feature
 
