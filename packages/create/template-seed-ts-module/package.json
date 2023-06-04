@@ -7,9 +7,6 @@
   "unpkg": "dist/bundle.umd.min.js",
   "devMain": "src/index.ts",
   "typings": "dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "test": "cross-env BABEL_ENV=test NODE_ENV=testing jest --coverage",
     "test:watch": "jest --watch",
