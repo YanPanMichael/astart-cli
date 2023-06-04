@@ -11,7 +11,7 @@ const BannerUtil = require('../utils/banner-utils')
 const pkgLoader = require('../utils/pkg-loader')
 const minimist = require('minimist')
 const chalk = require('chalk')
-const ignore = require('ignore');
+// const ignore = require('ignore');
 const { IGNORE_FILE } = require('../../constants')
 
 const cwd = process.cwd()
@@ -39,15 +39,9 @@ const renameFiles = {
 }
 
 const addGitIgnoreWarning = () => {
-  try {
-    if (!ignore.ignores(IGNORE_FILE)) {
-      ignore.add(IGNORE_FILE);
-    }
-  } catch(err) {
-    console.log(`${
-      chalk.yellow.bold('\nWarning: could not add .gitignore file. Please don\'t forget to add it manually.')
-    }`)
-  }
+  console.log(`${
+    chalk.yellow.bold('\nWarning: could not add .gitignore file. Please don\'t forget to add it manually.')
+  }`)
 }
 
 async function init () {
