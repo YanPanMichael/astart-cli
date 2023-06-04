@@ -1,11 +1,19 @@
 {
   "name": "astart-cli",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "author": "YanPanMichael",
   "repository": {
     "type": "git",
     "url": "https://github.com/YanPanMichael/astart-cli.git"
   },
+  "description": "A modern web application scaffold with multiple solution templates",
+  "main": "bin/cli.js",
+  "files": [
+    "bin",
+    "packages",
+    "constants",
+    "CHANGELOG.md"
+  ],
   "bugs": {
     "url": "https://github.com/YanPanMichael/astart-cli/issues",
     "email": "1214863281@qq.com"
@@ -40,13 +48,12 @@
     "colors": "^1.4.0",
     "enquirer": "^2.3.6",
     "execa": "^5.1.1",
+    "ignore": "^5.2.4",
     "minimist": "^1.2.7",
     "prettier": "^2.5.1",
     "progress": "^2.0.3",
     "single-line-log": "^1.1.2"
   },
-  "description": "A modern web application scaffold with multiple solution templates",
-  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
