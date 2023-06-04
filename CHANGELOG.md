@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+## [1.6.0](https://github.com/YanPanMichael/astart-cli/compare/v1.5.2...v1.6.0) (2023-06-04)
+
+
+### Features
+
+* fix warning block the normal process ([8d7fc6b](https://github.com/YanPanMichael/astart-cli/commit/8d7fc6b8e94f758db85401637bf80cb4ee83ecad))
+
 ### [1.5.2](https://github.com/YanPanMichael/astart-cli/compare/v1.5.1...v1.5.2) (2023-04-02)
 
 ### [1.5.1](https://github.com/YanPanMichael/astart-cli/compare/v1.5.0...v1.5.1) (2023-04-02)
