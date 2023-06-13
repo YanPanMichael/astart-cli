@@ -1,6 +1,6 @@
 {
   "name": "astart-cli",
-  "version": "1.6.4",
+  "version": "1.7.0",
   "author": "YanPanMichael",
   "repository": {
     "type": "git",
@@ -63,7 +63,7 @@
     "esbuild-wasm": "^0.15.12",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
-    "qk-release": "^1.1.2",
+    "qk-release": "latest",
     "vitepress": "1.0.0-alpha.26",
     "vue": "^3.2.41"
   },
