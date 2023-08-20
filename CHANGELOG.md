@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+## [1.8.0](https://github.com/YanPanMichael/astart-cli/compare/v1.7.0...v1.8.0) (2023-08-20)
+
+
+### Features
+
+* add react module ([111e039](https://github.com/YanPanMichael/astart-cli/commit/111e039597f4053c29fbc2e8141ba0e7b6778ad6))
+* add the config ([c544b93](https://github.com/YanPanMichael/astart-cli/commit/c544b930636d57ea272b2bf86ad37983c3548f8a))
+
 ## [1.7.0](https://github.com/YanPanMichael/astart-cli/compare/v1.6.4...v1.7.0) (2023-06-13)
 
 
