@@ -1,5 +1,5 @@
 {
-  "name": "template-seed-ts-module",
+  "name": "template-seed-vue-module",
   "version": "0.0.1",
   "description": "seed typescript module",
   "main": "dist/bundle.cjs.min.js",
@@ -10,7 +10,7 @@
   "scripts": {
     "test": "cross-env BABEL_ENV=test NODE_ENV=testing jest --coverage",
     "test:watch": "jest --watch",
-    "build": "cross-env NODE_ENV=production cpack build --source=ts",
+    "build": "cross-env NODE_ENV=production vpack build",
     "lint": "eslint . --ext .ts",
     "fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -33,7 +33,7 @@
     "eslint-plugin-jest": "^26.1.5",
     "jest": "~27.5",
     "qk-release": "latest",
-    "@autopack/cpack": "latest",
+    "@autopack/vpack": "latest",
     "ts-jest": "^27.1.4",
     "validate-commit-msg": "^2.14.0",
     "@commitlint/cli": "^11.0.0",

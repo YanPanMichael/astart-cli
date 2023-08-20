@@ -1,4 +1,4 @@
-# template-seed-ts-module
+# template-seed-vue-module
 
 > By.
 

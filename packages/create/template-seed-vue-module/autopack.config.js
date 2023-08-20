@@ -1,5 +1,5 @@
 /**
- * @autopack/rpack
+ * @autopack/vpack
  */
 module.exports = ({ pkg } = {}) => {
   return {
