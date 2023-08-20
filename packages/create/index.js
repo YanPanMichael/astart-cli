@@ -76,10 +76,12 @@ async function init () {
       type: 'select',
       name: 'ProjectTemplate',
       message: 'Project-template/选择项目模板',
-      initial: 'seed-react-app',
+      initial: 'seed-ts-module',
       choices: [
-        { name: 'seed-react-app' },
         { name: 'seed-ts-module' },
+        { name: 'seed-react-module' },
+        { name: 'seed-vue-module' },
+        { name: 'seed-react-app' },
         { name: 'seed-vue3-app' },
         { name: 'webpack-protist-js' }
       ]

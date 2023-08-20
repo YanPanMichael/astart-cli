@@ -1,5 +1,5 @@
 {
-  "name": "template-seed-ts-module",
+  "name": "template-seed-react-module",
   "version": "0.0.1",
   "description": "seed typescript module",
   "main": "dist/bundle.cjs.min.js",
@@ -10,7 +10,7 @@
   "scripts": {
     "test": "cross-env BABEL_ENV=test NODE_ENV=testing jest --coverage",
     "test:watch": "jest --watch",
-    "build": "cross-env NODE_ENV=production cpack build --source=ts",
+    "build": "cross-env NODE_ENV=production rpack build",
     "lint": "eslint . --ext .ts",
     "fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -19,7 +19,10 @@
     "changelog": "conventional-changelog -p simple -i CHANGELOG.md -s -r 0"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
   "devDependencies": {
     "@commitlint/prompt": "^16.2.4",
     "@types/jest": "^27.0.1",
@@ -33,7 +36,7 @@
     "eslint-plugin-jest": "^26.1.5",
     "jest": "~27.5",
     "qk-release": "latest",
-    "@autopack/cpack": "latest",
+    "@autopack/rpack": "latest",
     "ts-jest": "^27.1.4",
     "validate-commit-msg": "^2.14.0",
     "@commitlint/cli": "^11.0.0",
