@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [chan-log](https://github.com/conventional-changelog/chan-log) for commit guidelines.
 
+## [1.9.0](https://github.com/YanPanMichael/astart-cli/compare/v1.8.0...v1.9.0) (2023-09-11)
+
+
+### Features
+
+* update pkg config ([4926fc3](https://github.com/YanPanMichael/astart-cli/commit/4926fc3d419361c206c4d8cd1cefa71152bd287b))
+
 ## [1.8.0](https://github.com/YanPanMichael/astart-cli/compare/v1.7.0...v1.8.0) (2023-08-20)
 
 
