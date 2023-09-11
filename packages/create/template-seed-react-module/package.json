@@ -8,15 +8,16 @@
   "devMain": "src/index.ts",
   "typings": "dist/types/index.d.ts",
   "scripts": {
-    "test": "cross-env BABEL_ENV=test NODE_ENV=testing jest --coverage",
-    "test:watch": "jest --watch",
     "build": "cross-env NODE_ENV=production rpack build",
-    "lint": "eslint . --ext .ts",
-    "fix": "eslint . --fix",
-    "format": "prettier --write .",
     "release": "qkrelease",
     "changelog:help": "conventional-changelog --help",
-    "changelog": "conventional-changelog -p simple -i CHANGELOG.md -s -r 0"
+    "changelog": "conventional-changelog -p simple -i CHANGELOG.md -s -r 0",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,mdx}\"",
+    "prepare": "husky install",
+    "test": "jest --coverage --no-cache",
+    "test:watch": "jest --coverage --watch",
+    "test:prod": "npm run lint && npm run test -- --no-cache"
   },
   "license": "MIT",
   "dependencies": {
@@ -42,7 +43,14 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "conventional-changelog-cli": "^2.1.1",
-    "husky": "^4.3.8"
+    "husky": "^8.0.3",
+    "json": "11.0.0",
+    "lint-staged": "13.2.3",
+    "lit": "^2.8.0",
+    "prettier": "3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "husky": {
     "hooks": {
@@ -54,6 +62,11 @@
     "commitizen": {
       "path": "commitiquette"
     }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,css,md}": [
+      "prettier -w"
+    ]
   },
   "changelogConfig": {
     "authorName": true,
