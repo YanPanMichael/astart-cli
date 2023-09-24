@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-const BASE = "/astart-docs/";
+const BASE = "./";
 
 export default defineConfig({
   lang: "zh-CN",
@@ -27,7 +27,7 @@ export default defineConfig({
         link: "https://github.com/YanPanMichael/astart-cli",
       },
       {
-        icon: "npm",
+        icon: ``,
         link: "https://www.npmjs.com/package/astart-cli",
       },
     ],
