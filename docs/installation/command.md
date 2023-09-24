@@ -8,3 +8,7 @@
 ```bash
 astart # run command astart in terminal directly
 ```
+OR
+```bash
+npx astart-cli@latest
+```

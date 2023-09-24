@@ -157,7 +157,7 @@ export default defineConfig({
           collapsible: true,
           items: [
             {
-              text: "姓名",
+              text: "作者",
             },
             {
               text: "主页链接",

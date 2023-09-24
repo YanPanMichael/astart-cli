@@ -2,7 +2,7 @@
 
 ---
 
-::: info 姓名
+::: info 作者
 Yan Pan
 :::
 

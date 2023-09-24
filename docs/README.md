@@ -23,6 +23,10 @@
 ```bash
 npm install -g astart-cli@latest # OR yarn global add astart-cli@latest
 ```
+OR
+```bash
+npx astart-cli@latest
+```
 
 ### command
 
