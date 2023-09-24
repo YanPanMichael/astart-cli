@@ -2,6 +2,7 @@
   "name": "astart-cli",
   "version": "1.4.1",
   "author": "YanPanMichael",
+  "homepage": "./",
   "repository": {
     "type": "git",
     "url": "https://github.com/YanPanMichael/astart-cli.git"
