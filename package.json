@@ -18,7 +18,6 @@
     "url": "https://github.com/YanPanMichael/astart-cli/issues",
     "email": "1214863281@qq.com"
   },
-  "homepage": "https://github.com/YanPanMichael/astart-cli",
   "bin": {
     "astart": "bin/cli.js"
   },
@@ -37,7 +36,6 @@
     "release": "qkrelease --skipBuild",
     "fix": "eslint . --fix",
     "posttest": "eslint .",
-    "docs:docsify": "docsify serve ./docs2",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
